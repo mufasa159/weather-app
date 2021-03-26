@@ -5,6 +5,7 @@ HEIGHT = 400
 WIDTH = 700
 
 root = tk.Tk()
+root.title("Weather App")
 
 
 def format_response(weather):
@@ -43,7 +44,7 @@ frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
 entry = tk.Entry(frame)
 entry.place(relwidth=0.65, relheight=1)
 
-button = tk.Button(frame, text="Get Weather", bg='gray', command=lambda: get_weather(entry.get()))
+button = tk.Button(frame, text="Get Weather", command=lambda: get_weather(entry.get()))
 button.place(relx=0.7, relwidth=0.3, relheight=1)
 
 lower_frame = tk.Frame(root, bg="blue", bd=5)
